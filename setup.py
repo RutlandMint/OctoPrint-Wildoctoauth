@@ -7,7 +7,7 @@ plugin_version = "0.1.0"
 plugin_description = """Wild Apricot login integration"""
 plugin_author = "Bill Kuker"
 plugin_author_email = "bkuker@rutlandmint.org"
-plugin_url = "https://github.com/bkuker/OctoPrint-Wildoctoauth"
+plugin_url = "https://github.com/RutlandMint/OctoPrint-Wildoctoauth"
 plugin_license = "AGPLv3"
 plugin_requires = []
 
