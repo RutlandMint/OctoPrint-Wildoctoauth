@@ -41,11 +41,11 @@ class WaApiClient(object):
         """
         scope = "auto" if scope is None else scope
         data = {
-            "grant_type": "password",
-            "username": username,
-            "password": password,
-            "scope": scope
-        }
+                "grant_type": "password",
+                "username": username,
+                "password": password,
+                "scope": scope
+                }
         encoded_data = urllib.urlencode(data).encode()
         request = urllib2.Request(self.auth_endpoint, encoded_data)
         request.add_header("ContentType", "application/x-www-form-urlencoded")
@@ -65,7 +65,7 @@ class WaApiClient(object):
         """
         if self._token is None:
             raise ApiException("Access token is not abtained. "
-                               "Call authenticate_with_apikey or authenticate_with_contact_credentials first.")
+                    "Call authenticate_with_apikey or authenticate_with_contact_credentials first.")
 
         if not api_url.startswith("http"):
             api_url = self.api_endpoint + api_url
@@ -101,9 +101,9 @@ class WaApiClient(object):
 
     def _refresh_auth_token(self):
         data = {
-            "grant_type": "refresh_token",
-            "refresh_token": self._token.refresh_token
-        }
+                "grant_type": "refresh_token",
+                "refresh_token": self._token.refresh_token
+                }
         encoded_data = urllib.urlencode(data).encode()
         request = urllib2.Request(self.auth_endpoint, encoded_data)
         request.add_header("ContentType", "application/x-www-form-urlencoded")
